@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.makilette.inappupdates"
+        minSdkVersion 21
+        targetSdkVersion 28
+        // versionCode: 6にて、APKファイルをアップロードした.
+        versionCode 7
+        versionName "7.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // APK signingConfigs
+    signingConfigs {
+        debug {
+            // Set the debugging signature under the project route with the following contents
+            storeFile rootProject.file('release.keystore')
+            storePassword 'makilette'
+            keyAlias 'makilette'
+            keyPassword 'makilette'
+        }
+
+        release {
+            // Set the release signature under the project route with the following contents
+            storeFile rootProject.file('release.keystore')
+            storePassword 'makilette'
+            keyAlias 'makilette'
+            keyPassword 'makilette'
+        }
+    }
+
+    buildTypes {
+        debug {
+            // signature
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // signature
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // This dependency is downloaded from the Google’s Maven repository.
+    // So, make sure you also include that repository in your project's build.gradle file.
+    implementation 'com.google.android.play:core:1.6.1'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    // APKサイズを上げるために　適当なサードパーティライブラリを追加
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+}
