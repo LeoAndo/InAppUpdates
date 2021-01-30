@@ -6,10 +6,13 @@ sample for InAppUpdates
 
 
 ### 動作確認エビデンス
-**Immediate:**
+
+### Immediate
+
 <img src="https://user-images.githubusercontent.com/16476224/62906028-f63ea700-bda7-11e9-866f-d3cf437496e6.png" width=320>
 
-**Flexible:**
+### Flexible
+
 <img src="https://user-images.githubusercontent.com/16476224/62906042-0787b380-bda8-11e9-8531-848d10fcd26a.png" width=320>
 
 ### テスト時のメモ
