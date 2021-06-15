@@ -6,12 +6,6 @@ sample for InAppUpdates
 Play Core library 1.5.0以降を使用する必要があります。<br>
 これらの要件を満たした後、アプリはアプリ内アップデート用に次のUXをサポートできます。<br>
 
-### screenshot
-<img src="https://user-images.githubusercontent.com/16476224/106348757-f7e98b00-630b-11eb-9321-1f6aa0e7e0fe.png" width=320 />
-
-
-### 動作確認エビデンス
-
 ### Immediate
 
 強制アップデートで、全画面表示される。<br>
@@ -40,3 +34,9 @@ https://developer.android.com/guide/playcore/in-app-updates/test
 
 注：アプリをAndroidアプリバンドルとして公開する場合、アプリ内更新を使用するアプリの圧縮ダウンロードの最大許容サイズは150MBです。<br>
 アプリ内更新は、APK拡張ファイル（.obbファイル）を使用するアプリと互換性がありません。<br>
+
+### ドキュメント
+https://developer.android.com/guide/app-bundle/in-app-updates
+
+### API
+https://developer.android.com/reference/com/google/android/play/core/classes
