@@ -18,7 +18,7 @@ sample for InAppUpdates
 ### テスト時のメモ
 
 参考:
-https://developer.android.com/guide/app-bundle/in-app-updates#troubleshoot
+https://developer.android.com/guide/playcore/in-app-updates/test
 
 テスト方法
 1. Google PlayにAPKをリリースした開発者アカウントでログインする
