@@ -10,37 +10,6 @@ import com.google.android.play.core.install.model.ActivityResult
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.UpdateAvailability
 
-/**
- * https://developer.android.com/guide/app-bundle/in-app-updates
- *
- * https://qiita.com/consomme72/items/bcda09cf36e4fc6d31b7
- *
- * アプリ内アップデートは、Android 5.0（APIレベル21）以降を実行しているデバイスでのみ機能し
- * Play Core library 1.5.0以降を使用する必要があります。
- * これらの要件を満たした後、アプリはアプリ内アップデート用に次のUXをサポートできます。
- *
- * Immediate:
- * 強制アップデート全画面表示
- * 拒否できない.アップデートしないとアプリが使えない.
- *
- * Flexible:
- * アップデートダイアログ表示 拒否できる.
- * アップデート処理がバックグランドで行わレルため、アプリを引き続き操作できる.
- *
- *
- * ### In app-updatesテスト時のメモ
- * 参考:
- * https://developer.android.com/guide/app-bundle/in-app-updates#troubleshoot
- * テスト方法
- * 1. Google PlayにAPKをリリースした開発者アカウントでログインする
- * 2. 最低１回は、Google PlayからAPKをインストールする
- * 3. Android Studioからバージョンコードを下げて、Android端末にインストールする
- * ※この時、ダウングレードになるので、アプリアンインストールしてインストールという形になる.
- * 4. アプリを起動して操作する.
- *
- * 注：アプリをAndroidアプリバンドルとして公開する場合、アプリ内更新を使用するアプリの圧縮ダウンロードの最大許容サイズは150MBです。
- * アプリ内更新は、APK拡張ファイル（.obbファイル）を使用するアプリと互換性がありません。
- */
 class MainActivity : AppCompatActivity() {
 
 
