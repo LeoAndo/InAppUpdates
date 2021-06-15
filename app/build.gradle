@@ -17,23 +17,7 @@ android {
     }
 
     // APK signingConfigs
-    signingConfigs {
-        debug {
-            // Set the debugging signature under the project route with the following contents
-            storeFile rootProject.file('release.keystore')
-            storePassword 'makilette'
-            keyAlias 'makilette'
-            keyPassword 'makilette'
-        }
-
-        release {
-            // Set the release signature under the project route with the following contents
-            storeFile rootProject.file('release.keystore')
-            storePassword 'makilette'
-            keyAlias 'makilette'
-            keyPassword 'makilette'
-        }
-    }
+    // key: maXXXXXe
 
     buildTypes {
         debug {
